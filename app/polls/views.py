@@ -23,7 +23,7 @@ class IndexView(generic.ListView):
         Return the last five published question
         (not including those set to be published in the future)
         """
-        return Question.objects.order_by(pub_date__lte=timezone.now()).order_by("-pub_date")[:5]
+        return Question.objects.filter(pub_date__lte=timezone.now()).order_by("-pub_date")[:5]
 
 # def detail(request, question_id):
 #     question = get_object_or_404(Question, pk=question_id)
