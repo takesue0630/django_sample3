@@ -2,6 +2,7 @@ from deep_translator import GoogleTranslator
 from textblob import TextBlob
 
 text = '今日はいい天気だった。日差しが暖かかった。'
+# text = '今日は雨が降っていた。洗濯物を取り込み忘れたせいで、再び濡れてしまい洗濯が二度手間となった。'
 
 trans_text = GoogleTranslator(source='auto', target='en').translate(text)
 
